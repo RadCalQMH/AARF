@@ -33,26 +33,22 @@
             text-align: center;
             margin-bottom: 25px; 
         }
-        /* Unified style for all main section titles */
         h2.section-title, h3.section-title { 
-            color: #0056b3; /* Blue color */
+            color: #0056b3;
             text-align: center; 
             margin-bottom: 15px;
             margin-top: 20px;
         }
-        /* Specific margins for h3 titles (1., 2., 3.) */
         h3.section-title { 
              margin-top: 15px; 
              margin-bottom: 10px;
         }
-        /* Specific margins for h2 titles (4., 5., 6., 7.) */
         .results-section h2.section-title, 
         .interpretation-container h2.section-title,
         .chart-container h2.section-title,
         .reference-section h2.section-title { 
-            margin-top: 0; /* Keep top margin 0 if it's the first element in its container */
+            margin-top: 0;
         }
-
 
         .description-block { 
             background-color: #f9f9f9;
@@ -62,257 +58,108 @@
             border-radius: 4px;
             font-size: 0.95em;
         }
-        .description-block p {
-            margin-bottom: 10px;
-        }
-        .description-block strong { 
-            color: #0056b3;
-        }
-        .description-block ul {
-            padding-left: 20px;
-            margin-top: 5px;
-            margin-bottom: 15px; 
-        }
-        .description-block li {
-            margin-bottom: 5px;
-        }
-
+        .description-block p { margin-bottom: 10px; }
+        .description-block strong { color: #0056b3; }
+        .description-block ul { padding-left: 20px; margin-top: 5px; margin-bottom: 15px; }
+        .description-block li { margin-bottom: 5px; }
 
         .selection-group { 
             text-align: center;
             margin-bottom: 5px;
         }
         .selection-group button {
-            padding: 10px 15px;
-            margin: 5px; 
-            border: 1px solid #007bff;
-            background-color: #fff;
-            color: #007bff;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s, color 0.3s;
+            padding: 10px 15px; margin: 5px; border: 1px solid #007bff;
+            background-color: #fff; color: #007bff; border-radius: 5px;
+            cursor: pointer; font-size: 1rem; transition: background-color 0.3s, color 0.3s;
         }
-        .selection-group button:hover {
-            background-color: #e9ecef;
-        }
-        .selection-group button.active {
-            background-color: #007bff;
-            color: white;
-        }
+        .selection-group button:hover { background-color: #e9ecef; }
+        .selection-group button.active { background-color: #007bff; color: white; }
         .info-note { 
-            text-align: center;
-            font-style: italic;
-            font-size: 0.9em;
-            color: #555;
-            margin-top: 5px;
-            margin-bottom: 15px; 
-            min-height: 1.2em; 
+            text-align: center; font-style: italic; font-size: 0.9em; color: #555;
+            margin-top: 5px; margin-bottom: 15px; min-height: 1.2em; 
         }
-        #torticollisNote { 
-            display: none;
-        }
-
+        #torticollisNote { display: none; }
 
         .input-sections {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-            margin-bottom: 20px;
+            display: flex; flex-wrap: wrap; justify-content: space-around;
+            gap: 20px; margin-bottom: 20px;
         }
-
         .data-set {
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            flex: 1;
-            min-width: 280px;
+            border: 1px solid #ddd; padding: 15px; border-radius: 5px;
+            background-color: #f9f9f9; flex: 1; min-width: 280px;
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
         }
-        .data-set.hidden {
-            display: none; 
-        }
-
-
-        .data-set h3 { 
-            margin-top: 0;
-            color: #007bff;
-            text-align: left; 
-        }
-
-        .data-set label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
+        .data-set.hidden { display: none; }
+        .data-set h3 { margin-top: 0; color: #007bff; text-align: left; }
+        .data-set label { display: block; margin-bottom: 5px; font-weight: bold; }
         .data-set input[type="number"] {
-            width: calc(100% - 16px);
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            width: calc(100% - 16px); padding: 8px; margin-bottom: 10px;
+            border: 1px solid #ccc; border-radius: 4px;
         }
 
         .calculate-button {
-            display: block;
-            width: 100%;
-            max-width: 300px;
-            margin: 20px auto;
-            padding: 12px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+            display: block; width: 100%; max-width: 300px; margin: 20px auto;
+            padding: 12px 20px; background-color: #007bff; color: white;
+            border: none; border-radius: 5px; cursor: pointer; font-size: 16px;
             transition: background-color 0.3s ease;
         }
-
-        .calculate-button:hover {
-            background-color: #0056b3;
-        }
+        .calculate-button:hover { background-color: #0056b3; }
 
         .results-section, .interpretation-container, .chart-container, .reference-section {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e9ecef; 
+            margin-top: 20px; padding: 15px; background-color: #e9ecef; 
             border-radius: 5px;
         }
         .chart-container, .reference-section { 
-             background: #fff; 
-             padding: 15px;
-             border-radius: 8px;
+             background: #fff; padding: 15px; border-radius: 8px;
              box-shadow: 0 0 10px rgba(0,0,0,0.05);
         }
         
-        #resultsTable {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px; 
-        }
-
+        #resultsTable { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
         #resultsTable th, #resultsTable td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-            font-size: 0.9rem;
+            border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 0.9rem;
         }
-        #resultsTable thead th { 
-            background-color: #007bff;
-            color: white;
-            font-weight: bold;
-        }
-        #resultsTable tbody td:first-child { 
-            font-weight: bold;
-            background-color: #f0f0f0; 
-        }
-         #resultsTable tbody td[colspan] { 
-            text-align: center;
-            font-weight: normal;
-            background-color: #fff; 
-        }
-        #resultsTable tbody tr:nth-child(even) td:not(:first-child):not([colspan]) { 
-             background-color: #f9f9f9;
-        }
-         #resultsTable tbody tr:nth-child(odd) td:not(:first-child):not([colspan]) {
-            background-color: #fff;
-        }
+        #resultsTable thead th { background-color: #007bff; color: white; font-weight: bold; }
+        #resultsTable tbody td:first-child { font-weight: bold; background-color: #f0f0f0; }
+        #resultsTable tbody td[colspan] { text-align: center; font-weight: normal; background-color: #fff; }
+        #resultsTable tbody tr:nth-child(even) td:not(:first-child):not([colspan]) { background-color: #f9f9f9; }
+        #resultsTable tbody tr:nth-child(odd) td:not(:first-child):not([colspan]) { background-color: #fff; }
 
         .analysis-subsection { 
-            margin-top: 20px; 
-            padding: 15px;
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 4px;
+            margin-top: 20px; padding: 15px; background-color: #f8f9fa;
+            border: 1px solid #dee2e6; border-radius: 4px;
         }
         .results-section > .analysis-subsection:first-child,
-        .interpretation-container > .analysis-subsection:first-child {
-            margin-top: 0;
-        }
-        .analysis-subsection + .analysis-subsection {
-            margin-top: 15px; 
-        }
-
-
+        .interpretation-container > .analysis-subsection:first-child { margin-top: 0; }
+        .analysis-subsection + .analysis-subsection { margin-top: 15px; }
         .analysis-subsection h3 { 
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: #0056b3;
-            text-align: left;
-            font-size: 1.1rem;
+            margin-top: 0; margin-bottom: 10px; color: #0056b3;
+            text-align: left; font-size: 1.1rem;
         }
-        .analysis-subsection p, .analysis-subsection ul {
-            margin: 8px 0;
-            font-size: 1rem;
-        }
-         .analysis-subsection ul {
-            padding-left: 20px; 
-        }
-        .analysis-subsection li {
-            margin-bottom: 4px;
-        }
-        .highlight-abnormal { 
-            color: red;
-            font-weight: bold;
-        }
+        .analysis-subsection p, .analysis-subsection ul { margin: 8px 0; font-size: 1rem; }
+        .analysis-subsection ul { padding-left: 20px; }
+        .analysis-subsection li { margin-bottom: 4px; }
+        .highlight-abnormal { color: red; font-weight: bold; }
 
         .reference-section {
-            font-size: 0.85em; 
-            background-color: #f9f9f9; 
+            font-size: 0.85em; background-color: #f9f9f9; 
             border-left: 4px solid #6c757d; 
         }
-        /* .reference-section h2.section-title is now covered by the general rule */
-        .reference-section p {
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
+        .reference-section p { margin-bottom: 10px; line-height: 1.5; }
         
-        canvas {
-            width: 100% !important;
-            height: auto !important;
-            max-height: 500px;
-        }
-
+        canvas { width: 100% !important; height: auto !important; max-height: 500px; }
         footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid #ddd;
-            font-size: 0.9em;
-            color: #777;
+            text-align: center; margin-top: 30px; padding-top: 15px;
+            border-top: 1px solid #ddd; font-size: 0.9em; color: #777;
         }
         
         @media (max-width: 768px) {
-            .selection-group {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .selection-group button {
-                width: 80%;
-                max-width: 250px;
-            }
-            .input-sections {
-                flex-direction: column;
-                align-items: center;
-            }
-            .data-set {
-                width: 100%;
-                max-width: 400px;
-            }
-            #resultsTable th, #resultsTable td {
-                font-size: 0.8rem;
-                padding: 6px;
-            }
-            .analysis-subsection p, .analysis-subsection ul {
-                font-size: 0.9rem;
-            }
-            .reference-section {
-                font-size: 0.8em;
-            }
+            .selection-group { display: flex; flex-direction: column; align-items: center; }
+            .selection-group button { width: 80%; max-width: 250px; }
+            .input-sections { flex-direction: column; align-items: center; }
+            .data-set { width: 100%; max-width: 400px; }
+            #resultsTable th, #resultsTable td { font-size: 0.8rem; padding: 6px; }
+            .analysis-subsection p, .analysis-subsection ul { font-size: 0.9rem; }
+            .reference-section { font-size: 0.8em; }
         }
     </style>
 </head>
@@ -324,9 +171,12 @@
             <p><strong>Disclaimer:</strong> The author makes no claims of the accuracy of the information contained herein; this information is for educational purposes only and is not a substitute for clinical judgment.</p>
             <p><strong>How to use:</strong></p>
             <ul>
-                <li>Full protocol refers to acquisition of images at neutral position and voluntary maximal rotation to both sides. Abbreviated protocol refers to acquisition of images at presenting/neutral position and voluntary maximal contralateral rotation.</li>
-                <li>Images should be acquired with shoulders pressed flat against the CT table and stabilized during the entire examination for consistent assessment of C1 angle.</li>
-				<li>MPR reconstruction for measurement at plane parallel to occiput(C0), C1 and C2 respectively. Refer to the article by Pang and Li for detailed description.</li>
+                <li>Full protocol refers to acquisition of images at neutral position and voluntary maximal rotation to both sides.</li>
+                <li>Abbreviated protocol refers to acquisition of images at presenting position and voluntary maximal contralateral rotation. For this calculator, "Turn Left" and "Turn Right" data sets are used for Abbreviated Protocol (Neutral set is hidden).</li>
+            </ul>
+            <ul>
+                <li>MPR reconstruction for measurement at plane parallel to occiput, C1 and C2 respectively.</li>
+                <li>Rotate image so that the short axis of subaxial cervical spine is vertical, to reflect accurate measurement of C1 angle.</li>
                 <li>Measure C0, C1 and C2 angles against a vertical line.</li>
                 <li>The side of torticollis was assigned the positive sign (which should also be the side toward which the chin was initially pointing, by convention).</li>
 				<li>There is no established pathological range of C0-C1 angle. From the publication by Pang and Li, there is very little relative motion between C1 and occiput during normal head rotation, and the normal range is between 3 degrees on each side.</li>
@@ -389,7 +239,7 @@
         <button class="calculate-button" onclick="processDataAndDrawChart()">Generate findings</button>
 
         <div class="results-section" id="resultsSection" style="display:none;">
-            <h2 class="section-title">4. Calculated Values</h2>
+            <h2 class="section-title">4. Data analysis</h2>
             <div id="resultsTableContainer">
             </div>
             <div id="c1c2CrossingAnalysisContainer" class="analysis-subsection" style="display:none;">
@@ -397,6 +247,7 @@
                 <div id="c1c2CrossingContent"></div>
             </div>
             <div id="interceptsOutputContainer" class="analysis-subsection">
+                <!-- Content generated by JS -->
             </div>
         </div>
 
@@ -406,6 +257,7 @@
                 <h3>Atlantooccipital Joint Interpretation</h3>
                 <div id="oajSubluxationContent"></div>
             </div>
+            <!-- MODIFICATION: This section will be hidden by JS -->
             <div id="aarfPresenceInterpretationSection" class="analysis-subsection">
                 <h3>Presence of AARF</h3>
                 <div id="aarfPresenceContent"></div>
@@ -415,7 +267,6 @@
                 <div id="pangLiClassificationContent"></div>
             </div>
         </div>
-
 
         <div class="chart-container" id="chartContainerDiv" style="display:none;">
             <h2 class="section-title">6. Graphs</h2>
@@ -430,10 +281,7 @@
 		<div class="acknowledgement-section" id="acknowledgementSection">
             <h2 class="section-title">8. Acknowledgement</h2>
             <p>Courtesy to Ms YS Chong for her inspiration and assistance in compiling this calculator. Generative AI (Gemini-2.5-Pro-Exp, Google) was used in the generation of this calculator.</p>
-           
         </div>
-
-
     </div>
 
     <footer>
@@ -465,28 +313,23 @@
 
         function updateDataSetVisibility() {
             const protocolNote = document.getElementById('protocolNote');
-            let note = "Displaying all data sets for Full Protocol.";
+            let note = "";
 
             if (selectedProtocol === 'full') {
                 dataSetElements.tl.classList.remove('hidden');
                 dataSetElements.n.classList.remove('hidden');
                 dataSetElements.tr.classList.remove('hidden');
+                note = "Displaying all data sets for Full Protocol.";
             } else if (selectedProtocol === 'abbreviated') {
+                dataSetElements.tl.classList.remove('hidden');
+                dataSetElements.tr.classList.remove('hidden');
+                dataSetElements.n.classList.add('hidden'); 
+                
+                note = "Abbreviated Protocol: Displaying Turn Left and Turn Right sets for data entry.";
                 if (selectedTorticollis === 'left') {
-                    dataSetElements.tl.classList.add('hidden');
-                    dataSetElements.n.classList.remove('hidden');
-                    dataSetElements.tr.classList.remove('hidden');
-                    note = "Abbreviated Protocol (Left Torticollis): Displaying Neutral and Turn Right sets.";
+                    note += " (Left Torticollis selected)";
                 } else if (selectedTorticollis === 'right') {
-                    dataSetElements.tl.classList.remove('hidden');
-                    dataSetElements.n.classList.remove('hidden');
-                    dataSetElements.tr.classList.add('hidden');
-                    note = "Abbreviated Protocol (Right Torticollis): Displaying Neutral and Turn Left sets.";
-                } else { 
-                    dataSetElements.tl.classList.add('hidden'); 
-                    dataSetElements.n.classList.remove('hidden');
-                    dataSetElements.tr.classList.remove('hidden');
-                    note = "Abbreviated Protocol: Select Torticollis type for specific view.";
+                    note += " (Right Torticollis selected)";
                 }
             }
             protocolNote.textContent = note;
@@ -513,8 +356,13 @@
 
         function calculateXIntercept(p1, p2) {
             if (!p1 || !p2) return "N/A (Missing points)";
+            if (p1.x === null || isNaN(p1.x) || p1.y === null || isNaN(p1.y) ||
+                p2.x === null || isNaN(p2.x) || p2.y === null || isNaN(p2.y)) {
+                return "N/A (Invalid data in points)";
+            }
             const x1 = p1.x; const y1 = p1.y;
             const x2 = p2.x; const y2 = p2.y;
+
             if (y1 === y2) return y1 === 0 ? "Line is the x-axis" : "N/A (Horizontal line not on x-axis)";
             if (x1 === x2) return x1.toFixed(2); 
             const slope = (y2 - y1) / (x2 - x1);
@@ -524,25 +372,10 @@
 
         function processDataAndDrawChart() {
             let allInputsValid = true;
-            let activeDataSetConfigs = [];
-            if (selectedProtocol === 'full') {
-                activeDataSetConfigs = [...allDataSetConfigs];
-            } else { 
-                if (selectedTorticollis === 'left') {
-                    activeDataSetConfigs = allDataSetConfigs.filter(ds => ds.idPrefix === 'n' || ds.idPrefix === 'tr');
-                } else if (selectedTorticollis === 'right') {
-                    activeDataSetConfigs = allDataSetConfigs.filter(ds => ds.idPrefix === 'n' || ds.idPrefix === 'tl');
-                } else { 
-                    activeDataSetConfigs = allDataSetConfigs.filter(ds => ds.idPrefix === 'n' || ds.idPrefix === 'tr');
-                }
-            }
-            if (activeDataSetConfigs.length === 0) { 
-                alert("No data sets selected for analysis based on protocol/torticollis choices.");
-                return;
-            }
+            let dataReadingConfigs = [...allDataSetConfigs];
 
-            activeDataSetConfigs.forEach(set => {
-                if (set.element.classList.contains('hidden')) {
+            dataReadingConfigs.forEach(set => {
+                if (set.element.classList.contains('hidden')) { 
                     ['original_c0', 'original_c1', 'original_c2', 'working_c0', 'working_c1', 'working_c2', 
                      'table_c0_c1', 'table_c1_c2', 'analysis_c0_c1', 'analysis_c1_c2'].forEach(key => set[key] = null);
                     return; 
@@ -578,7 +411,8 @@
             const c1c2CrossingContentDiv = document.getElementById('c1c2CrossingContent');
             const interceptsOutputContainer = document.getElementById('interceptsOutputContainer');
             const oajSubluxationContentDiv = document.getElementById('oajSubluxationContent'); 
-            const aarfPresenceContentDiv = document.getElementById('aarfPresenceContent');
+            const aarfPresenceInterpretationSection = document.getElementById('aarfPresenceInterpretationSection'); // Get the section
+            const aarfPresenceContentDiv = document.getElementById('aarfPresenceContent'); // Though content won't be set if section is hidden
             const pangLiClassificationSection = document.getElementById('pangLiClassificationSection');
             const pangLiClassificationContentDiv = document.getElementById('pangLiClassificationContent');
             const interpretationContainer = document.getElementById('interpretationContainer'); 
@@ -588,40 +422,45 @@
             c1c2CrossingContentDiv.innerHTML = '';
             interceptsOutputContainer.innerHTML = '<h3>Estimated C1 Angle of normal null point of axial rotation</h3>'; 
             oajSubluxationContentDiv.innerHTML = ''; 
-            aarfPresenceContentDiv.innerHTML = '';
+            aarfPresenceContentDiv.innerHTML = ''; // Clear content just in case
             pangLiClassificationContentDiv.innerHTML = '';
 
-
-            if (!allInputsValid && activeDataSetConfigs.some(set => !set.element.classList.contains('hidden'))) { 
+            if (!allInputsValid && dataReadingConfigs.some(set => !set.element.classList.contains('hidden') && (isNaN(set.original_c0) || isNaN(set.original_c1) || isNaN(set.original_c2)) )) { 
                 alert("Please ensure all input fields for active data sets contain valid numbers.");
                 const errorMsg = "<p style='color:red;'>Invalid input in active data sets. Please correct and try again.</p>";
                 resultsTableContainer.innerHTML = errorMsg; 
                 c1c2CrossingContentDiv.innerHTML = "<p style='color:red;'>Cannot calculate due to invalid input.</p>";
                 interceptsOutputContainer.innerHTML += "<p style='color:red;'>Cannot calculate due to invalid input.</p>";
                 oajSubluxationContentDiv.innerHTML = "<p style='color:red;'>Cannot provide interpretation due to invalid input.</p>"; 
-                aarfPresenceContentDiv.innerHTML = "<p style='color:red;'>Cannot provide interpretation due to invalid input.</p>"; 
+                // aarfPresenceContentDiv.innerHTML = "<p style='color:red;'>Cannot provide interpretation due to invalid input.</p>"; // Not needed if section hidden
                 pangLiClassificationContentDiv.innerHTML = "<p style='color:red;'>Cannot provide classification due to invalid input.</p>";
                 document.getElementById('resultsSection').style.display = 'block';
                 c1c2CrossingAnalysisContainer.style.display = 'block';
                 interpretationContainer.style.display = 'block';
-                pangLiClassificationSection.style.display = selectedProtocol === 'full' ? 'block' : 'none';
+                aarfPresenceInterpretationSection.style.display = 'none'; // Hide AARF section
+                pangLiClassificationSection.style.display = 'block'; 
                 if (chartContainerDiv) chartContainerDiv.style.display = 'block'; 
                 drawCombinedChart([], referenceData);
                 return;
             }
             
-            const trulyActiveSetsForTableAndAnalysis = activeDataSetConfigs.filter(set => !set.element.classList.contains('hidden'));
+            const trulyActiveSetsForTableAndAnalysis = allDataSetConfigs.filter(set => 
+                !set.element.classList.contains('hidden') &&
+                !isNaN(set.original_c0) && !isNaN(set.original_c1) && !isNaN(set.original_c2)
+            );
+
             if (trulyActiveSetsForTableAndAnalysis.length === 0) {
-                resultsTableContainer.innerHTML = "<p>No data sets are active for display or analysis based on current selections.</p>";
+                resultsTableContainer.innerHTML = "<p>No data sets are active or contain valid data for display or analysis.</p>";
                 c1c2CrossingContentDiv.innerHTML = "<p>N/A</p>";
                 interceptsOutputContainer.innerHTML += "<p>N/A</p>";
                 oajSubluxationContentDiv.innerHTML = "<p>N/A</p>";
-                aarfPresenceContentDiv.innerHTML = "<p>N/A</p>";
+                // aarfPresenceContentDiv.innerHTML = "<p>N/A</p>"; // Not needed
                 pangLiClassificationContentDiv.innerHTML = "<p>N/A</p>";
                 document.getElementById('resultsSection').style.display = 'block';
                 c1c2CrossingAnalysisContainer.style.display = 'block';
                 interpretationContainer.style.display = 'block';
-                pangLiClassificationSection.style.display = selectedProtocol === 'full' ? 'block' : 'none';
+                aarfPresenceInterpretationSection.style.display = 'none'; // Hide AARF section
+                pangLiClassificationSection.style.display = 'block';
                 if (chartContainerDiv) chartContainerDiv.style.display = 'block';
                 drawCombinedChart([], referenceData);
                 return;
@@ -629,16 +468,14 @@
 
             let numericPercentageChangeC1C2 = NaN; 
 
-            // Populate Table
             const tableMetrics = [
                 { label: "C0-C1 Angle", key_table_calc: "table_c0_c1" }, { label: "C1 Angle",    key_original: "original_c1" },
                 { label: "C1-C2 Angle", key_table_calc: "table_c1_c2" }, { label: "C0 Angle",    key_original: "original_c0" },
-                { label: "C2 Angle",    key_original: "original_c2" }
+                { label: "C2 Angle",    key_original: "original_c2" },
+                { label: "Percentage change of C1-C2 angle", isCustomCalc: true, id: "percentageChangeC1C2" }
             ];
-            if (selectedProtocol === 'full') {
-                tableMetrics.push({ label: "Percentage change of C1-C2 angle", isCustomCalc: true, id: "percentageChangeC1C2" });
-            }
-            let tableHTML = '<table id="resultsTable"><thead><tr><th>Metric</th>';
+            
+            let tableHTML = '<table id="resultsTable"><thead><tr><th></th>'; 
             trulyActiveSetsForTableAndAnalysis.forEach(set => { tableHTML += `<th>${set.name}</th>`; });
             tableHTML += '</tr></thead><tbody>';
             tableMetrics.forEach(metric => {
@@ -648,13 +485,15 @@
 
                     if (selectedTorticollis === 'left') labelDetail = " (Left to Right)";
                     else if (selectedTorticollis === 'right') labelDetail = " (Right to Left)";
-                    const tl_config = allDataSetConfigs.find(ds => ds.idPrefix === 'tl');
-                    const tr_config = allDataSetConfigs.find(ds => ds.idPrefix === 'tr');
-                    const tl_c1_c2_val = (tl_config && !tl_config.element.classList.contains('hidden') && tl_config.table_c1_c2 !== null && !isNaN(tl_config.table_c1_c2)) ? tl_config.table_c1_c2 : null;
-                    const tr_c1_c2_val = (tr_config && !tr_config.element.classList.contains('hidden') && tr_config.table_c1_c2 !== null && !isNaN(tr_config.table_c1_c2)) ? tr_config.table_c1_c2 : null;
+                    
+                    const tl_config = trulyActiveSetsForTableAndAnalysis.find(ds => ds.idPrefix === 'tl');
+                    const tr_config = trulyActiveSetsForTableAndAnalysis.find(ds => ds.idPrefix === 'tr');
+
+                    const tl_c1_c2_val = (tl_config && tl_config.table_c1_c2 !== null && !isNaN(tl_config.table_c1_c2)) ? tl_config.table_c1_c2 : null;
+                    const tr_c1_c2_val = (tr_config && tr_config.table_c1_c2 !== null && !isNaN(tr_config.table_c1_c2)) ? tr_config.table_c1_c2 : null;
                     
                     if (!selectedTorticollis) percentageChangeValueDisplay = "N/A (Select Torticollis type for % change)";
-                    else if (tl_c1_c2_val === null || tr_c1_c2_val === null) percentageChangeValueDisplay = "N/A (Turn Left/Right C1-C2 data missing or invalid)";
+                    else if (tl_c1_c2_val === null || tr_c1_c2_val === null) percentageChangeValueDisplay = "N/A (Turn Left & Turn Right C1-C2 data missing, invalid, or sets not active/filled)";
                     else { 
                         let initialValue, finalValue;
                         if (selectedTorticollis === 'left') { initialValue = tl_c1_c2_val; finalValue = tr_c1_c2_val; } 
@@ -663,7 +502,7 @@
                         else {
                             const change = ((finalValue - initialValue) / Math.abs(initialValue)) * 100;
                             numericPercentageChangeC1C2 = change; 
-                            percentageChangeValueDisplay = `${change.toFixed(2)}%`;
+                            percentageChangeValueDisplay = `${Math.abs(numericPercentageChangeC1C2).toFixed(2)}%`;
                         }
                     }
                     tableHTML += `<tr><td><strong>${metric.label}${labelDetail}</strong></td><td colspan="${trulyActiveSetsForTableAndAnalysis.length || 1}">${percentageChangeValueDisplay}</td></tr>`;
@@ -679,7 +518,6 @@
             tableHTML += '</tbody></table>';
             resultsTableContainer.innerHTML = tableHTML;
 
-            // "Does C1 cross C2?" Analysis
             const valid_c1_c2_values = trulyActiveSetsForTableAndAnalysis
                 .map(set => set.table_c1_c2) 
                 .filter(val => val !== null && !isNaN(val));
@@ -687,11 +525,9 @@
             let c1c2CrossingStatus = "undetermined"; 
             if (valid_c1_c2_values.length === 0) {
                  c1c2CrossingStatus = "undetermined";
-            } else if (valid_c1_c2_values.length === 1 && selectedProtocol === 'abbreviated' && trulyActiveSetsForTableAndAnalysis.length === 1) {
+            } else if (valid_c1_c2_values.length === 1) { 
                 c1c2CrossingStatus = "does_not_cross";
-            } else if (valid_c1_c2_values.length < 2) {
-                 c1c2CrossingStatus = "undetermined";
-            } else {
+            } else { 
                 const hasNonNegative = valid_c1_c2_values.some(v => v >= 0);
                 const hasNonPositive = valid_c1_c2_values.some(v => v <= 0);
                 if (hasNonNegative && hasNonPositive) c1c2CrossingStatus = "crosses";
@@ -706,7 +542,6 @@
             c1c2CrossingContentDiv.innerHTML = `<p>${c1c2CrossingDisplayMessage}</p>`;
             c1c2CrossingAnalysisContainer.style.display = 'block';
 
-            // X-Intercepts for Display
             let userDataPoints = trulyActiveSetsForTableAndAnalysis.map(set => ({
                 x: set.working_c1, 
                 y: set.analysis_c1_c2, 
@@ -714,128 +549,123 @@
             })).filter(point => point.x !== null && !isNaN(point.x) && point.y !== null && !isNaN(point.y));
             userDataPoints.sort((a, b) => a.x - b.x); 
             
-            let interceptsHTML = '';
-            if (selectedTorticollis === 'right') {
-                const tlPoint = userDataPoints.find(p => p.label === "Turn Left");
-                const nPoint = userDataPoints.find(p => p.label === "Neutral");
-                if (tlPoint && nPoint) interceptsHTML += `<p><strong>Turn Left - Neutral:</strong> ${calculateXIntercept(tlPoint, nPoint)}</p>`;
-                else interceptsHTML += `<p><strong>Turn Left - Neutral:</strong> N/A (Required data points not available or not active)</p>`;
-            } else if (selectedTorticollis === 'left') {
-                const nPoint = userDataPoints.find(p => p.label === "Neutral");
-                const trPoint = userDataPoints.find(p => p.label === "Turn Right");
-                if (nPoint && trPoint) interceptsHTML += `<p><strong>Neutral - Turn Right:</strong> ${calculateXIntercept(nPoint, trPoint)}</p>`;
-                else interceptsHTML += `<p><strong>Neutral - Turn Right:</strong> N/A (Required data points not available or not active)</p>`;
-            } else { 
-                if (userDataPoints.length >= 2) interceptsHTML += `<p><strong>${userDataPoints[0].label} - ${userDataPoints[1].label}:</strong> ${calculateXIntercept(userDataPoints[0], userDataPoints[1])}</p>`;
-                else interceptsHTML += `<p><strong>First segment:</strong> N/A (Need at least 2 data points)</p>`;
-                if (userDataPoints.length >= 3) interceptsHTML += `<p><strong>${userDataPoints[1].label} - ${userDataPoints[2].label}:</strong> ${calculateXIntercept(userDataPoints[1], userDataPoints[2])}</p>`;
-                else if (userDataPoints.length === 2) interceptsHTML += `<p><strong>Second segment:</strong> N/A (Only 2 data points available for a second distinct segment)</p>`;
-            }
-            interceptsOutputContainer.innerHTML += interceptsHTML; 
+            let numericXInterceptForAARF = NaN; 
+            let xInterceptSourceSegmentName = ""; 
+            const tlPoint = userDataPoints.find(p => p.label === "Turn Left");
+            const nPoint = userDataPoints.find(p => p.label === "Neutral"); 
+            const trPoint = userDataPoints.find(p => p.label === "Turn Right");
 
-            // OAJ Interpretation
+            if (selectedProtocol === 'full') {
+                if (selectedTorticollis === 'right') {
+                    xInterceptSourceSegmentName = "Turn Left - Neutral";
+                    if (tlPoint && nPoint) {
+                        numericXInterceptForAARF = parseFloat(calculateXIntercept(tlPoint, nPoint));
+                    } else {
+                        numericXInterceptForAARF = NaN;
+                        if (!tlPoint || !nPoint) xInterceptSourceSegmentName += " (Data N/A)";
+                    }
+                } else if (selectedTorticollis === 'left') {
+                    xInterceptSourceSegmentName = "Turn Right - Neutral";
+                    if (trPoint && nPoint) {
+                        numericXInterceptForAARF = parseFloat(calculateXIntercept(trPoint, nPoint));
+                    } else {
+                        numericXInterceptForAARF = NaN;
+                        if (!trPoint || !nPoint) xInterceptSourceSegmentName += " (Data N/A)";
+                    }
+                } else { 
+                    xInterceptSourceSegmentName = "N/A (Select Torticollis for specific rule under Full Protocol)";
+                    numericXInterceptForAARF = NaN;
+                }
+            } else if (selectedProtocol === 'abbreviated') {
+                xInterceptSourceSegmentName = "Turn Left - Turn Right";
+                if (tlPoint && trPoint) {
+                    numericXInterceptForAARF = parseFloat(calculateXIntercept(tlPoint, trPoint));
+                } else {
+                    numericXInterceptForAARF = NaN;
+                     if (!tlPoint || !trPoint) xInterceptSourceSegmentName += " (Data N/A)";
+                }
+            }
+            
+            interceptsOutputContainer.innerHTML = '<h3>Estimated C1 Angle of normal null point of axial rotation</h3>';
+            let displayInterceptHTML = "";
+            if (!isNaN(numericXInterceptForAARF)) {
+                displayInterceptHTML = `<p>Calculated from segment "${xInterceptSourceSegmentName.replace(" (Data N/A)","")}": <strong>${numericXInterceptForAARF.toFixed(2)}</strong></p>`;
+            } else {
+                displayInterceptHTML = `<p>Calculation from segment "${xInterceptSourceSegmentName.replace(" (Data N/A)","")}": <strong>N/A</strong></p>`;
+                 if (xInterceptSourceSegmentName.includes("N/A (Select Torticollis")) {
+                     displayInterceptHTML = `<p>${xInterceptSourceSegmentName}</p>`;
+                 } else if (xInterceptSourceSegmentName.includes("(Data N/A)")) {
+                     displayInterceptHTML = `<p>Cannot calculate from segment "${xInterceptSourceSegmentName.replace(" (Data N/A)","")}" due to missing/invalid data.</p>`;
+                 } else if (xInterceptSourceSegmentName === "") {
+                     displayInterceptHTML = `<p>Segment for calculation not determined.</p>`;
+                 }
+            }
+            interceptsOutputContainer.innerHTML += displayInterceptHTML;
+
             let anySubluxationEvident = false; let abnormalSetsDetails = []; let validC0C1Count = 0;
             trulyActiveSetsForTableAndAnalysis.forEach(set => {
                 if (set.analysis_c0_c1 !== null && !isNaN(set.analysis_c0_c1)) {
                     validC0C1Count++;
-                    if (set.analysis_c0_c1 < -3 || set.analysis_c0_c1 > 3) {
+                    if (set.analysis_c0_c1 < -3 || set.analysis_c0_c1 > 3) { 
                         anySubluxationEvident = true;
                         abnormalSetsDetails.push({ name: set.name, value: set.analysis_c0_c1 });
                     }
                 }
             });
             let oajInterpretationHTML = '';
-            if (validC0C1Count === 0) oajInterpretationHTML = "<p>Cannot determine atlantooccipital joint as no C0-C1 angles (from processed data of active sets) are available.</p>";
+            if (validC0C1Count === 0) oajInterpretationHTML = "<p>Cannot determine atlantooccipital joint rotational instability as no C0-C1 angles are available.</p>";
             else if (anySubluxationEvident) {
-                oajInterpretationHTML = "<p><strong>Atlantooccipital joint rotational instability is suspected.</strong></p><p>The following C0-C1 angle(s) (derived from processed data of active sets) are outside the normal range of -3 to 3 degrees:</p><ul>";
+                oajInterpretationHTML = "<p><strong>Atlantooccipital joint rotational instability is suspected.</strong></p><p>The following C0-C1 angle(s) are outside the normal range of -3 to 3 degrees:</p><ul>";
                 abnormalSetsDetails.forEach(abnormal => { oajInterpretationHTML += `<li>${abnormal.name}: <span class="highlight-abnormal">${abnormal.value.toFixed(2)}</span> degrees</li>`; });
                 oajInterpretationHTML += "</ul>";
-            } else oajInterpretationHTML = "<p><strong>No atlantooccipital joint rotational instability.</strong></p><p>(Based on all available C0-C1 angles from processed data of active sets being within the normal range.)</p>";
+            } else oajInterpretationHTML = "<p><strong>No atlantooccipital joint rotational instability.</strong></p><p>(C0-C1 angles are within the normal range of -3 to 3 degrees.)</p>";
             oajSubluxationContentDiv.innerHTML = oajInterpretationHTML; 
             
-            // Presence of AARF Interpretation
-            let numericXInterceptForAARF = NaN;
-            let xInterceptSourceSegmentName = "";
-            if (selectedTorticollis === 'right') {
-                const tlPoint = userDataPoints.find(p => p.label === "Turn Left");
-                const nPoint = userDataPoints.find(p => p.label === "Neutral");
-                if (tlPoint && nPoint) { numericXInterceptForAARF = parseFloat(calculateXIntercept(tlPoint, nPoint)); xInterceptSourceSegmentName = "Turn Left - Neutral"; }
-            } else if (selectedTorticollis === 'left') {
-                const nPoint = userDataPoints.find(p => p.label === "Neutral");
-                const trPoint = userDataPoints.find(p => p.label === "Turn Right");
-                if (nPoint && trPoint) { numericXInterceptForAARF = parseFloat(calculateXIntercept(nPoint, trPoint)); xInterceptSourceSegmentName = "Neutral - Turn Right"; }
-            } else { 
-                if (userDataPoints.length === 2) { 
-                    numericXInterceptForAARF = parseFloat(calculateXIntercept(userDataPoints[0], userDataPoints[1])); 
-                    xInterceptSourceSegmentName = `${userDataPoints[0].label} - ${userDataPoints[1].label}`;
-                }
-            }
+            // AARF Presence content calculation is no longer needed as the section is hidden.
+            // However, numericXInterceptForAARF is still needed for Pang Li.
 
-            let aarfInterpretationContentText = '';
+            pangLiClassificationSection.style.display = 'block';
+            let pangLiMessage = "";
             if (c1c2CrossingStatus === "undetermined") {
-                aarfInterpretationContentText = "<p>AARF interpretation cannot be determined because whether C1 crosses C2 could not be established (insufficient data).</p>";
+                pangLiMessage = "<p>Pang and Li classification cannot be determined because whether C1 crosses C2 could not be established.</p>";
             } else if (c1c2CrossingStatus === "does_not_cross") {
-                aarfInterpretationContentText = "<p>Based on the finding that <strong>C1 does not cross C2</strong>:</p><p><strong>Findings are consistent with AARF.</strong></p>";
-            } else { // c1c2CrossingStatus === "crosses"
-                if (!isNaN(numericXInterceptForAARF)) {
-                    let finding = "";
-                    if (numericXInterceptForAARF >= -8 && numericXInterceptForAARF <= 8) finding = "AARF is not evident.";
-                    else if ((numericXInterceptForAARF >= -20 && numericXInterceptForAARF < -8) || (numericXInterceptForAARF > 8 && numericXInterceptForAARF <= 20)) finding = "Findings are in diagnostic grey zone for AARF.";
-                    else if (numericXInterceptForAARF < -20 || numericXInterceptForAARF > 20) finding = "Findings are consistent with AARF.";
-                    aarfInterpretationContentText = `<p> <strong>C1 crosses C2</strong>, the Estimated C1 Angle of normal null point of axial rotation from segment "${xInterceptSourceSegmentName}" (<strong>${numericXInterceptForAARF.toFixed(2)}</strong>) is assessed:</p><p><strong>${finding}</strong></p>`;
+                if (!selectedTorticollis) {
+                    pangLiMessage = "<p>Pang and Li classification (Type 1 or 2) requires selection of Torticollis type to calculate percentage change of C1-C2 angle.</p>";
+                } else if (isNaN(numericPercentageChangeC1C2)) {
+                    pangLiMessage = "<p>Pang and Li classification (Type 1 or 2) cannot be determined because the percentage change of C1-C2 angle is not available or invalid (requires valid Turn Left and Turn Right data for the selected torticollis direction).</p>";
                 } else {
-                    if (selectedProtocol === 'full' && userDataPoints.length !== 2 && !selectedTorticollis) aarfInterpretationContentText = "<p>C1 crosses C2. However, for AARF interpretation under Full Protocol with current data, please select a specific torticollis type (Left or Right) for analysis.</p>";
-                    else if (selectedProtocol === 'abbreviated' && userDataPoints.length !== 2 && !selectedTorticollis) aarfInterpretationContentText = "<p>C1 crosses C2. However, for AARF interpretation under Abbreviated Protocol, ensure two valid data points are active or select a specific torticollis type for analysis.</p>";
-                    else aarfInterpretationContentText = "<p>C1 crosses C2. However, AARF interpretation cannot be fully determined as the required Estimated C1 Angle of normal null point of axial rotation could not be calculated from a single, clear segment based on current selections and data.</p>";
-                }
-            }
-            aarfPresenceContentDiv.innerHTML = aarfInterpretationContentText;
-
-            // Pang and Li Classification
-            if (selectedProtocol === 'full') {
-                pangLiClassificationSection.style.display = 'block';
-                let pangLiMessage = "";
-                if (c1c2CrossingStatus === "undetermined") {
-                    pangLiMessage = "<p>Pang and Li classification cannot be determined because whether C1 crosses C2 could not be established.</p>";
-                } else if (c1c2CrossingStatus === "does_not_cross") {
-                    if (!selectedTorticollis) {
-                        pangLiMessage = "<p>Pang and Li classification (Type 1 or 2) requires selection of Torticollis type to calculate percentage change of C1-C2 angle.</p>";
-                    } else if (isNaN(numericPercentageChangeC1C2)) {
-                        pangLiMessage = "<p>Pang and Li classification (Type 1 or 2) cannot be determined because the percentage change of C1-C2 angle is not available or invalid.</p>";
-                    } else {
-                        if (numericPercentageChangeC1C2 < 20) {
-                            pangLiMessage = "<p>Based on C1 not crossing C2 and percentage change of C1-C2 angle < 20% (<strong>" + numericPercentageChangeC1C2.toFixed(2) + "%</strong>):</p><p><strong>Findings are consistent with Pang type 1 AARF.</strong></p>";
-                        } else { // >= 20%
-                            pangLiMessage = "<p>Based on C1 not crossing C2 and percentage change of C1-C2 angle &ge; 20% (<strong>" + numericPercentageChangeC1C2.toFixed(2) + "%</strong>):</p><p><strong>Findings are consistent with Pang type 2 AARF.</strong></p>";
-                        }
-                    }
-                } else { // c1c2CrossingStatus === "crosses"
-                    if (isNaN(numericXInterceptForAARF)) {
-                        let reason = "";
-                        if (userDataPoints.length !== 2 && !selectedTorticollis) reason = " Please select a specific torticollis type (Left or Right) to identify the relevant segment for x-intercept analysis, or ensure exactly two data points are active for x-intercept calculation if no torticollis type is selected.";
-                        else reason = " The required Estimated C1 Angle of normal null point of axial rotation could not be calculated from a single, clear segment based on current selections and data.";
-                        pangLiMessage = "<p>C1 crosses C2. However, Pang and Li classification cannot be fully determined as the Estimated C1 Angle of normal null point of axial rotation is not available." + reason + "</p>";
-                    } else {
-                        let xInterceptFindingText = `Estimated C1 Angle of normal null point of axial rotation from segment "${xInterceptSourceSegmentName}" is <strong>${numericXInterceptForAARF.toFixed(2)}</strong>`;
-                        let pangTypeResult = "";
-                        if (numericXInterceptForAARF < -20 || numericXInterceptForAARF > 20) {
-                            pangTypeResult = "Findings are consistent with Pang type 3 AARF.";
-                        } else if ((numericXInterceptForAARF >= -20 && numericXInterceptForAARF < -8) || (numericXInterceptForAARF > 8 && numericXInterceptForAARF <= 20)) {
-                            pangTypeResult = "Findings are in diagnostic grey zone for AARF.";
-                        } else { // -8 to 8 inclusive
-                            pangTypeResult = "No AARF evident.";
-                        }
-                        pangLiMessage = `<p>Based on C1 crossing C2 and ${xInterceptFindingText}:</p><p><strong>${pangTypeResult}</strong></p>`;
+                    // MODIFICATION: Wording change and removal of "absolute" from descriptive text
+                    if (Math.abs(numericPercentageChangeC1C2) < 20) {
+                        pangLiMessage = "<p>Based on the finding that <strong>C1 does not cross C2</strong> and percentage change of C1-C2 angle < 20% (calculated as <strong>" + Math.abs(numericPercentageChangeC1C2).toFixed(2) + "%</strong>):</p><p><strong>Findings are consistent with Pang type 1 AARF.</strong></p>";
+                    } else { 
+                        pangLiMessage = "<p>Based on the finding that <strong>C1 does not cross C2</strong> and percentage change of C1-C2 angle &ge; 20% (calculated as <strong>" + Math.abs(numericPercentageChangeC1C2).toFixed(2) + "%</strong>):</p><p><strong>Findings are consistent with Pang type 2 AARF.</strong></p>";
                     }
                 }
-                pangLiClassificationContentDiv.innerHTML = pangLiMessage;
-            } else {
-                pangLiClassificationSection.style.display = 'none';
+            } else { // c1c2CrossingStatus === "crosses"
+                // MODIFICATION: Wording change
+                if (isNaN(numericXInterceptForAARF)) {
+                    let reason = `the Estimated C1 Angle of normal null point of axial rotation could not be calculated based on the selected protocol/torticollis (Segment: "${xInterceptSourceSegmentName.replace(" (Data N/A)","")}").`;
+                     if (xInterceptSourceSegmentName.includes("N/A (Select Torticollis")) reason = "Torticollis side not selected for Full Protocol, which is required for this specific calculation when C1 crosses C2.";
+                    pangLiMessage = `<p>Based on the finding that <strong>C1 crosses C2</strong>. However, Pang and Li classification cannot be fully determined as ${reason}</p>`;
+                } else {
+                    let xInterceptFindingText = `Estimated C1 Angle of normal null point of axial rotation from segment "${xInterceptSourceSegmentName.replace(" (Data N/A)","")}" is <strong>${numericXInterceptForAARF.toFixed(2)}</strong>`;
+                    let pangTypeResult = "";
+                    if (numericXInterceptForAARF < -20 || numericXInterceptForAARF > 20) {
+                        pangTypeResult = "Findings are consistent with Pang type 3 AARF.";
+                    } else if ((numericXInterceptForAARF >= -20 && numericXInterceptForAARF < -8) || (numericXInterceptForAARF > 8 && numericXInterceptForAARF <= 20)) {
+                        pangTypeResult = "Findings are in diagnostic grey zone for AARF.";
+                    } else { 
+                        pangTypeResult = "No AARF evident.";
+                    }
+                    pangLiMessage = `<p>Based on the finding that <strong>C1 crosses C2</strong> and ${xInterceptFindingText}:</p><p><strong>${pangTypeResult}</strong></p>`;
+                }
             }
-
+            pangLiClassificationContentDiv.innerHTML = pangLiMessage;
 
             document.getElementById('resultsSection').style.display = 'block';
             interpretationContainer.style.display = 'block'; 
+            aarfPresenceInterpretationSection.style.display = 'none'; // MODIFICATION: Hide AARF presence section
+            pangLiClassificationSection.style.display = 'block'; // Ensure PangLi is shown
             if (chartContainerDiv) chartContainerDiv.style.display = 'block'; 
             drawCombinedChart(userDataPoints, referenceData);
         }
