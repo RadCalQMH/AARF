@@ -586,7 +586,7 @@
             
             resultsTableContainer.innerHTML = ''; 
             c1c2CrossingContentDiv.innerHTML = '';
-            interceptsOutputContainer.innerHTML = '<h3>Estimated Angle of Normal Neutral Null Point Rotation</h3>'; 
+            interceptsOutputContainer.innerHTML = '<h3>Estimated C1 Angle of normal null point of axial rotation</h3>'; 
             oajSubluxationContentDiv.innerHTML = ''; 
             aarfPresenceContentDiv.innerHTML = '';
             pangLiClassificationContentDiv.innerHTML = '';
@@ -782,11 +782,11 @@
                     if (numericXInterceptForAARF >= -8 && numericXInterceptForAARF <= 8) finding = "AARF is not evident.";
                     else if ((numericXInterceptForAARF >= -20 && numericXInterceptForAARF < -8) || (numericXInterceptForAARF > 8 && numericXInterceptForAARF <= 20)) finding = "Findings are in diagnostic grey zone for AARF.";
                     else if (numericXInterceptForAARF < -20 || numericXInterceptForAARF > 20) finding = "Findings are consistent with AARF.";
-                    aarfInterpretationContentText = `<p>Since <strong>C1 crosses C2</strong>, the Estimated Angle of Normal Neutral Null Point Rotation from segment "${xInterceptSourceSegmentName}" (<strong>${numericXInterceptForAARF.toFixed(2)}</strong>) is assessed:</p><p><strong>${finding}</strong></p>`;
+                    aarfInterpretationContentText = `<p> <strong>C1 crosses C2</strong>, the Estimated C1 Angle of normal null point of axial rotation from segment "${xInterceptSourceSegmentName}" (<strong>${numericXInterceptForAARF.toFixed(2)}</strong>) is assessed:</p><p><strong>${finding}</strong></p>`;
                 } else {
-                    if (selectedProtocol === 'full' && userDataPoints.length !== 2 && !selectedTorticollis) aarfInterpretationContentText = "<p>C1 crosses C2. However, for AARF interpretation under Full Protocol with current data, please select a specific torticollis type (Left or Right) to identify the relevant segment for x-intercept analysis.</p>";
-                    else if (selectedProtocol === 'abbreviated' && userDataPoints.length !== 2 && !selectedTorticollis) aarfInterpretationContentText = "<p>C1 crosses C2. However, for AARF interpretation under Abbreviated Protocol, ensure two valid data points are active or select a specific torticollis type for x-intercept analysis.</p>";
-                    else aarfInterpretationContentText = "<p>C1 crosses C2. However, AARF interpretation cannot be fully determined as the required Estimated Angle of Normal Neutral Null Point Rotation could not be calculated from a single, clear segment based on current selections and data.</p>";
+                    if (selectedProtocol === 'full' && userDataPoints.length !== 2 && !selectedTorticollis) aarfInterpretationContentText = "<p>C1 crosses C2. However, for AARF interpretation under Full Protocol with current data, please select a specific torticollis type (Left or Right) for analysis.</p>";
+                    else if (selectedProtocol === 'abbreviated' && userDataPoints.length !== 2 && !selectedTorticollis) aarfInterpretationContentText = "<p>C1 crosses C2. However, for AARF interpretation under Abbreviated Protocol, ensure two valid data points are active or select a specific torticollis type for analysis.</p>";
+                    else aarfInterpretationContentText = "<p>C1 crosses C2. However, AARF interpretation cannot be fully determined as the required Estimated C1 Angle of normal null point of axial rotation could not be calculated from a single, clear segment based on current selections and data.</p>";
                 }
             }
             aarfPresenceContentDiv.innerHTML = aarfInterpretationContentText;
@@ -813,10 +813,10 @@
                     if (isNaN(numericXInterceptForAARF)) {
                         let reason = "";
                         if (userDataPoints.length !== 2 && !selectedTorticollis) reason = " Please select a specific torticollis type (Left or Right) to identify the relevant segment for x-intercept analysis, or ensure exactly two data points are active for x-intercept calculation if no torticollis type is selected.";
-                        else reason = " The required Estimated Angle of Normal Neutral Null Point Rotation could not be calculated from a single, clear segment based on current selections and data.";
-                        pangLiMessage = "<p>C1 crosses C2. However, Pang and Li classification cannot be fully determined as the Estimated Angle of Normal Neutral Null Point Rotation is not available." + reason + "</p>";
+                        else reason = " The required Estimated C1 Angle of normal null point of axial rotation could not be calculated from a single, clear segment based on current selections and data.";
+                        pangLiMessage = "<p>C1 crosses C2. However, Pang and Li classification cannot be fully determined as the Estimated C1 Angle of normal null point of axial rotation is not available." + reason + "</p>";
                     } else {
-                        let xInterceptFindingText = `Estimated Angle of Normal Neutral Null Point Rotation from segment "${xInterceptSourceSegmentName}" is <strong>${numericXInterceptForAARF.toFixed(2)}</strong>`;
+                        let xInterceptFindingText = `Estimated C1 Angle of normal null point of axial rotation from segment "${xInterceptSourceSegmentName}" is <strong>${numericXInterceptForAARF.toFixed(2)}</strong>`;
                         let pangTypeResult = "";
                         if (numericXInterceptForAARF < -20 || numericXInterceptForAARF > 20) {
                             pangTypeResult = "Findings are consistent with Pang type 3 AARF.";
