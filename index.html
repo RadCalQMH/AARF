@@ -613,12 +613,12 @@
                 }
             });
             let oajInterpretationHTML = '';
-            if (validC0C1Count === 0) oajInterpretationHTML = "<p>Cannot determine atlantooccipital joint rotational instability as no C0-C1 angles are available.</p>";
+            if (validC0C1Count === 0) oajInterpretationHTML = "<p>Cannot determine atlantooccipital joint laxity as no C0-C1 angles are available.</p>";
             else if (anySubluxationEvident) {
-                oajInterpretationHTML = "<p><strong>Atlantooccipital joint rotational instability is suspected.</strong></p><p>The following C0-C1 angle(s) are outside the normal range of -3 to 3 degrees:</p><ul>";
+                oajInterpretationHTML = "<p><strong>Atlantooccipital joint laxity is suspected.</strong></p><p>The following C0-C1 angle(s) are outside the normal range of -3 to 3 degrees:</p><ul>";
                 abnormalSetsDetails.forEach(abnormal => { oajInterpretationHTML += `<li>${abnormal.name}: <span class="highlight-abnormal">${abnormal.value.toFixed(2)}</span> degrees</li>`; });
                 oajInterpretationHTML += "</ul>";
-            } else oajInterpretationHTML = "<p><strong>No atlantooccipital joint rotational instability.</strong></p><p>(C0-C1 angles are within the normal range of -3 to 3 degrees.)</p>";
+            } else oajInterpretationHTML = "<p><strong>No atlantooccipital joint laxity.</strong></p><p>(C0-C1 angles are within the normal range of -3 to 3 degrees.)</p>";
             oajSubluxationContentDiv.innerHTML = oajInterpretationHTML; 
             
             // AARF Presence content calculation is no longer needed as the section is hidden.
