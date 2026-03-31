@@ -679,8 +679,8 @@
                         { label: 'Reference Curve', data: refData, borderColor: 'rgb(255, 99, 132)', backgroundColor: 'rgba(255, 99, 132, 0.2)', tension: 0.1, fill: false, pointRadius: 6, pointHoverRadius: 8, order: 2 }
                     ]},
                 options: { responsive: true, maintainAspectRatio: false, scales: {
-                        x: { type: 'linear', position: 'bottom', title: { display: true, text: 'C1 Angle (Processed) / X-coordinate' }},
-                        y: { title: { display: true, text: 'C1-C2 Angle (Processed) / Y-coordinate' }}
+                        x: { type: 'linear', position: 'bottom', title: { display: true, text: 'C1 Angle' }},
+                        y: { title: { display: true, text: 'C1-C2 Angle' }}
                     }, plugins: { tooltip: { callbacks: { label: function(context) {
                         let label = context.dataset.label || ''; if (label) label += ': ';
                         const pointSpecificLabel = context.raw.label; if (pointSpecificLabel) label = pointSpecificLabel + " ";
