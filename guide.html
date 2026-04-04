@@ -1,46 +1,105 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>The visual guide to measurements</title>
-<style>
-  html, body { height:100%; margin:0; }
-  #pdf-container { width:100%; height:100%; }
-  #pdf-container { border:1px solid #ddd; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The visual guide to measurements</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #f8f9fa;
+    }
+
+    #pdf-viewer {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      padding: 15px;
+    }
+
+    canvas {
+      display: block;
+      margin: 20px auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      max-width: 100%;
+    }
+
+    #loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, sans-serif;
+      color: #555;
+      text-align: center;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 5px solid #eee;
+      border-top: 5px solid #0066ff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 12px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
 
-<div id="pdf-container">
-  <iframe id="pdf-frame"
-          src="about:blank"
-          width="100%"
-          height="100%"
-          frameborder="0"
-          allowfullscreen
-          webkitallowfullscreen>
-  </iframe>
-</div>
+  <div id="loading">
+    <div class="spinner"></div>
+    <div>Loading PDF...</div>
+  </div>
 
-<script>
-  // ---- CONFIGURATION -------------------------------------------------
-  // Replace this with the URL of the PDF you want to display.
-  // It must be accessible via CORS, or you must point to your own proxy.
-  const remotePdfUrl = 'https://raw.githubusercontent.com/RadCalQMH/AARF/main/guide.pdf';
+  <div id="pdf-viewer"></div>
 
-  // PDF.js viewer hosted on a CDN (you can also self‑host)
-  const pdfJsViewer = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/web/viewer.html';
-  // -------------------------------------------------------------------
+  <script>
+    const PDF_URL = "https://raw.githubusercontent.com/RadCalQMH/AARF/main/guide.pdf";
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 
+      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
-  // Encode the PDF URL for safe inclusion in the query string
-  const encodedPdfUrl = encodeURIComponent(remotePdfUrl);
+    async function renderPDF() {
+      const viewer = document.getElementById('pdf-viewer');
+      const loading = document.getElementById('loading');
 
-  // Build the final viewer URL
-  const viewerUrl = `${pdfJsViewer}?file=${encodedPdfUrl}`;
+      try {
+        const pdf = await pdfjsLib.getDocument(PDF_URL).promise;
 
-  // Insert the viewer into the iframe
-  document.getElementById('pdf-frame').src = viewerUrl;
-</script>
+        for (let i = 1; i <= pdf.numPages; i++) {
+          const page = await pdf.getPage(i);
+          const viewport = page.getViewport({ scale: 1.7 });
 
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+
+          await page.render({
+            canvasContext: ctx,
+            viewport: viewport
+          }).promise;
+
+          viewer.appendChild(canvas);
+        }
+
+        loading.style.display = 'none';
+
+      } catch (e) {
+        loading.innerHTML = `<div style="color:red;">Failed to load PDF</div>`;
+      }
+    }
+
+    window.onload = renderPDF;
+  </script>
 </body>
 </html>
